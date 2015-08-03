@@ -1,0 +1,114 @@
+body{ 
+    width: 1200px;
+   
+    
+}
+
+
+#logo{
+    width: 288px;
+    height: 129px;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    display: block;
+}
+
+#icones{
+    display: block;
+    position: absolute;
+    top: 29px;
+    left: 700px;
+    //background-color: lightgray;
+    
+}
+
+.icones{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: block;
+    float: left;
+   // background-color: lightgray;
+    
+    
+}
+#login{
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 884px;
+    
+}
+
+.login{
+    width: 142px;
+    height: 22px;
+    //border-radius: %;
+    border-width: thin;
+    border-style: solid;
+    border-color: #1F8F99;
+    margin-left: 15px;
+    display: block;
+    float: left;
+}
+
+#menu{
+
+    position: absolute;
+    top: 128px;
+    left: 280px;
+    
+}
+
+
+li {
+   display: inline;
+   font-family: Myriad Pro;
+   font-size: 13pt;
+   font-style:normal;
+   margin-left: 45px;
+   
+       
+}
+
+li a:link{
+    font-family: Myriad Pro;
+   font-size: 13pt;
+   font-style:normal;
+   text-decoration: none;
+   color: #949494;
+       
+}
+
+li a:visited{
+    font-family: Myriad Pro;
+   font-size: 13pt;
+   font-style:normal;
+   text-decoration: none;
+   color: #949494;
+       
+}
+
+li a:hover{
+    font-family: Myriad Pro;
+   font-size: 13pt;
+   font-style:normal;
+   text-decoration: none;
+   color: #05A695;
+       
+}
+
+#linha{
+    width: 985px;
+    size: 0.5px;
+    position: absolute;
+    top: 160px;
+    left: 30px;
+}
+
+
+
+
+    

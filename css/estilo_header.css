@@ -1,0 +1,1088 @@
+/*RESET*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400);
+@import url('http://fonts.googleapis.com/css?family=Anton');
+
+
+body, html{
+    width: 100%;
+    height: 100%;
+    font-family: "Arial";
+    background-color: whitesmoke;
+    
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+    float: left;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+a{
+    text-decoration: none;
+    color: #6c6765;
+}
+
+img{
+    float: left;
+    position: relative;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0; 
+    }
+
+
+/*FIM DO RESET*/
+
+#todo{
+    width: 1280px;
+    float: none;
+    margin: 0 auto;
+    height: 100%;
+    
+}
+
+/* EDITANDO HEADER PADRÃO USUARIO NÃO LOGADO */
+#cabecalhoA{
+    width: 100%;
+    height: 155px;
+}
+
+#cabecalho{
+    width: 1200px;
+    float: none;
+    margin: 0auto;
+    margin-left: 30px;
+    height: 100%;
+    //background-color: gainsboro;
+}
+
+#logo{
+    width: 288px; 
+    height: 129px;   /* COVERTER A IMAGEM PARA NÃO PRECISAR DEFINIR O HEIGHT */
+    margin-top: 13px;
+    margin-left: 13px;
+}
+
+
+#icones{
+    float: right;
+    margin-right: 35px;
+}
+
+#icones2{
+    float: right;
+    
+}
+
+.icones{
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 30px;
+    width: 33px;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    transition: .2s all;
+}
+
+.icones:hover{
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.0 0.0 0.0 0 0 0.0 0.0 0.0 0 0 0.0 0.0 0.0 0 0 0 0 0 0 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: normal; /* IE6-9 */
+    -webkit-filter: grayscale(0); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+
+}
+
+
+
+#login{
+    width: auto;
+    height: auto;
+    margin-top: 33px;
+    float: right;
+}
+
+.login{
+    width: 142px;
+    height: 22px;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #1F8F99;
+   
+    padding-left: 50px;
+    padding-bottom: 2px;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+#loginsenha{
+     width: 97px;
+    height: 22px;
+    display: block;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #1F8F99;
+    margin-left: 5px;
+    padding-left: 50px;
+    padding-bottom: 2px;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+#logar {
+    width: 45px;
+    height: 26px;
+    display: block;
+    border-radius: 0px 10px 10px 0px;
+    border:  1px solid #1F8F99;
+    border-left: none;
+    margin-left: -20px;
+    padding-left: 50px;
+    padding-bottom: 2px;
+    outline: none;
+   //background-color: whitesmoke;
+    background-color: #6D9397;
+    
+  
+        
+    
+}
+
+#textoentrar{
+    margin-right: -50px;
+    padding-left: 10px;
+    margin-top: 4px;
+    font-family: "Open Sans",sans-serif;
+    font-size: 13px;
+    color: whitesmoke;
+    margin-left: -23px;
+    margin-top: 5px;
+}
+
+
+.nomeForm{
+    height:16px;
+    margin-right: -50px;
+    line-height: 14px;
+    padding-left: 10px;
+    margin-top: 4px;
+    font-family: "Open Sans",sans-serif;
+    font-size: 13px;
+    border-right: 2px solid #1F8F99;
+    padding-right: 5px;
+}
+
+#menuepesquisa{
+    margin-top: 5px;
+    
+}
+
+#menu{display: block; height: 20px; margin-top: -6px; width: 80%; float: left;}
+
+#menu ul{float: right;}
+
+#menu ul li{font-family: 'Myriad Pro'; font-style: normal; color: lightgrey; padding-left: 60px; padding-right: 0px;}
+
+#menu ul li a{transition: .2s all;}
+#menu ul li a:hover{color: #1F8F99;}
+
+#frmPesquisa{ width: 19%; margin-left: 10px;margin-top: -23px; }
+
+
+
+#pesquisa{
+    float: right;
+    position: relative;
+    top: 8px;
+    width: 190px;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: -10px;
+    margin-top: -2px;
+    background-color: #6D9397;
+    border: none;
+    height: 30px;
+    outline: none;
+}
+
+#btn_search{
+    position: relative;
+    width: 40px;
+    outline: none;
+    margin-left: 5px;
+
+}
+
+#linha{
+    position: relative;
+    width: 870px;
+    margin-top: 20px;
+    margin-left: 100px;
+    color: #949494;
+}
+
+
+/*EDITANDO HEADER LOGIN ADMIN */
+#barra{
+    width: 1280px;
+    height: 60px;
+    float: top;
+    background-color: whitesmoke;
+
+}
+
+#logoheader3{
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+
+
+
+/* EDITANDO HEADER USUARIO LOGADO */
+
+#areausuario{
+    width: 215px;
+    height: 75px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+#imagemusuario{
+    width: 65px;
+    height: 65px;
+    border:1px solid;
+    border-color: windowframe;
+    border-radius:50%;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    
+    
+    
+}
+
+#meuperfil{
+    width: 100px;
+    height: 25px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
+    background-color: #1F8F99;
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    text-align: center;
+    color: whitesmoke;
+    
+}
+
+
+/* EDITANDO AREA GALERIA E INSCREVA-SE */
+
+#area_gal{
+    width: 1200px;
+    height: 420px;
+    position: relative;
+    margin-left: 30px;
+    margin-top: 35px;
+    background-position: center;
+    //background-color: pink;
+    
+}
+
+#galeria{
+    width: 885px;
+    height: 420px;
+    position: relative;
+    margin: 0auto;
+    margin-left: 15px;
+    //background-color: #A8A7A7;
+}
+
+#galeria2{
+    width: 1185px;
+    height: 420px;
+    position: relative;
+    margin: 0auto;
+    margin-left: 15px;
+    //background-color: #A8A7A7;
+}
+
+/*EDITANDO FORM CADASTRO */ 
+
+#inscrever{
+    width: 290px;
+    height: 420px;
+    position: relative;
+    float: right;
+    background-color: #E1E1E1;
+    border-style: solid;
+    border-top: 1px;
+    border-color: grey;
+   
+    
+}
+
+#texto_cadastro{
+    font-family: 'Myriad Pro';
+    font-size: 15pt;
+    font-style: normal;
+    position: relative;
+    margin-left: 30px;
+    margin-top: 15px;
+    color: #5E5E5E;
+    
+}
+
+#precadastro{
+    width: 270px;
+    height: 260px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+
+label{
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    margin-left: 20px;
+    color: #4D4D4D;
+  
+    
+    
+}
+label.error { 
+       float: none;
+       color: red; 
+       padding-left: 215px;
+       vertical-align:central;
+       
+   }
+#form_cadastro_inical{
+  width:223px;
+  height: 28px;
+  font-family: "Arial";
+  font-size:18px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  border-color: #AEAEAE;
+  margin-bottom:15px;
+  outline: none;
+  display:block;
+  background-color: #E1E1E1;
+}
+
+#confirmarsenha{
+  width:150px;
+  height: 28px;
+  font-family: "Arial";
+  font-size:18px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  border-color: #AEAEAE;
+  margin-bottom:15px;
+  outline: none;
+  display:block;
+  background-color: #E1E1E1;
+}
+
+
+
+#enviar{
+    width: 68px;
+    height: 47px;
+    margin-left: 5px;
+    //margin-top: 19px;
+    background:#228B22;
+    //text-align: center;
+    color: whitesmoke;
+    border:1px solid #ccc;
+    border-radius:5px;
+    border-style: none;
+    outline: none;
+    font-size: 8pt;
+    
+}
+
+
+
+#login_alternativo{
+    width: 223px;
+    height: 50px;
+    background-color: #2E318D;
+    margin-left: 30px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    border-color: #2E318D;
+   
+    
+    
+    
+    
+    
+}
+#texto_fb{
+    
+     font-family: "Myriad Pro";
+     color: #FFFFFF;
+     margin-top: 15px;
+     margin-left: 30px;
+    
+}
+
+
+
+
+/* PUBLICIDADE  */
+
+#publicidade{
+    width: 1121px;
+    height: 100px;
+    position: relative;
+    margin-left: 75px;
+    margin-top: 15px;
+    border:1px solid #ccc;
+    background-color: white;
+}
+
+/*Conteudo */
+
+.Placa{
+    width: 414px;
+    height: 46px;
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: 30px;
+    margin-left: 0px;
+    background-color: #237d80;
+}
+
+#textobranco{
+    font-family: 'Anton', sans-serif;
+    font-size: 24pt;
+    font-style: normal;
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: #FFFFFF;
+    
+}
+
+#textopreto{
+    font-family: 'Anton', sans-serif;
+    font-size: 24pt;
+    font-style: normal;
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: #31383F;
+}
+
+
+
+    .resenhas{
+        width: 1185px;
+        height: 362px;
+        //background-color: burlywood;
+        position: relative;
+        float: left;
+        margin-left: 45px;
+        margin-top: 10px;
+        
+    }
+    
+    .img{
+        background-position: center;
+        -webkit-filter: brightness(0.4); 
+        width: 100%;
+        height: 100%;
+       
+
+        
+        
+        
+    }
+    .img:hover{
+       -webkit-filter: none;  
+    }
+    
+    
+    #resenha_1{
+        width: 368px;
+        height: 362px;
+       
+        
+    }
+  
+    
+    
+    #resenha_2{
+        width: 419px;
+        height: 362px;
+        position: relative;
+        margin-left: 7px;
+        //background-color: #A8A7A7;
+            
+    }
+    
+    #resenha_3{
+        width: 384px;
+        height: 181px;      
+        position: relative;
+        float: top;
+        margin-left:7px; 
+       // background-color: #A8A7A7;
+    }
+    
+    #resenha_4{
+        width: 384px;
+        height: 175px;       
+        margin-left: 7px; 
+        margin-top:7px;
+        //background-color: #A8A7A7;
+    }
+    
+        
+    #resenha_5{
+        width: 180.5px;
+        height: 362px;
+        //background-color: #A8A7A7;
+    }
+    
+    
+    
+    
+    #resenha_6{
+        width: 180.5px;
+        height: 362px;       
+        position: relative;
+        margin-left: 7px;
+        //background-color: #A8A7A7;
+            
+    }
+    
+    #resenha_7{
+        width: 419px;
+        height: 362px;       
+        position: relative;
+        float: top;
+        margin-left: 7px; 
+        //background-color: #A8A7A7;
+    }
+    
+   
+    
+    #resenha_8{
+        width: 382px;
+        height: 362px; 
+        margin-left: 7px; 
+        //background-color: #A8A7A7;
+        
+    }
+    
+    
+    /* RODAPÉ */
+    
+    #rodape{
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    background-color: #6D9397;
+    float:end;
+}
+
+.pp{
+    font-family:sans-serif;
+    color: #FFF;
+    font-size: 12pt;
+    text-decoration: none;
+    float: left;
+}
+
+.termos{
+    margin-top: 1.5%;
+    float: right;
+    margin-right: 50px;
+    
+}
+
+#mark{
+    font-family:sans-serif;
+    color: #FFF;
+    font-size: 12pt;
+    text-decoration: none;
+    margin-left: 35%;
+    float: left;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+/* EDITANDO A PAGINA DE CADASTRO */
+
+
+#cadastro {
+  width:640px;
+  height: 995px;
+  margin-left: 300px;
+  margin-top: 50px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  position:relative;
+  background-color: white;
+}
+
+
+.fieldsetformu{
+    width: 620px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    
+    
+}
+.legendform{
+    font-family: "Arial";
+    font-size: 15pt;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.tituloform{
+    font-family: "Arial";
+    font-size: 12pt;
+    margin-top: 20px;
+    margin-left: 15px;
+    float:left;
+    
+    
+}
+
+
+
+   label.error { 
+       float: none;
+       color: red; 
+       padding-left: 215px;
+       vertical-align:central;
+       
+   }
+
+#inputpadraocadas {
+  width:95%;
+  padding: 10px;
+  font-family: "Arial";
+  font-size:18px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  outline: none;
+  display:block;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-top: -40px;
+  
+  
+  
+}
+
+
+
+
+select{
+    font-family: "Arial";
+    width: 95%;
+  border:1px solid #ccc;
+  font-size:18px;
+  display:block;
+  margin-bottom:15px;
+  margin-top:5px;
+  margin-left: 5px;
+  outline: none;
+  border-radius:5px;
+  padding: 10px;
+    
+}
+
+
+
+
+#inputcadastrouser {
+  width: 95%;
+  margin-top: 10px;
+  margin-left: 15px;
+  background: #237d80;
+  padding:15px;
+  text-align: center;
+  text-shadow: 5px;
+  color: whitesmoke;
+  border:1px solid #ccc;
+  border-radius:5px;
+  
+ } 
+  
+
+
+#imgusuario{
+    
+    width: 600px;
+    margin-left: 10px;
+    background-color: white;
+    
+}
+
+#imagem_usuario{
+    width: 120px;
+    height: 120px;
+    border: solid 1px #ccc;
+    border-radius: 50%;
+    margin-left:225px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    
+}
+
+#inputfoto{
+    width: 30%;
+    border: none;
+   
+    
+}
+
+
+/*Login Admin*/
+
+#area_formlogin{
+    width: 400px;
+    height: 300px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    background-color: white;
+    margin-left: 440px;
+    margin-top: 200px;
+}
+
+
+#todo_formlogin{
+    width: 1280px;
+    float: none;
+    margin: 0auto;
+    height: 100%;
+    background-color: whitesmoke;
+    
+}
+
+#esqueci{
+    
+    float: right;
+    margin-right: 50px;
+    text-align: center;
+    font-family: "Arial";
+    font-size:11pt;
+    
+    
+    
+}
+
+#entrar_adm{
+    width:78%;
+    padding: 13px;
+  font-family: "Arial";
+  color: white;
+  border:1px solid #ccc;
+  border-radius:5px;
+  outline: none;
+  margin-bottom: 10px;
+  margin-left: 35px;
+  background-color: #237d80;
+  
+    
+}
+
+
+.login_admin{
+  width:95%;
+  padding: 10px;
+  font-family: "Arial";
+  font-size:18px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  outline: none;
+  display:block;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-top: -40px;
+  
+}
+
+
+/* EDITANDO PAGINA CRIAR RESENHA */
+
+#resenha {
+  width:640px;
+  height: 935px;
+  margin-left: 300px;
+  margin-top: 50px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  position:relative;
+  background-color: white;
+}
+
+#inform_produto{
+    width: 90%;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 5%;
+    
+    float: left;
+    
+    
+}
+
+#qualidades{
+    width: 45%;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+    
+}
+
+#opiniao_geral{
+    width: 90%;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-left: 5%;
+    
+    float: left;
+    
+}
+
+
+
+
+#inputpadraoresenha {
+  width:90%;
+  padding: 10px;
+  font-family: "Arial";
+  font-size:18px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  margin-top:40px;
+  margin-left: 5%;
+  outline: none;
+  display:block;
+  
+  
+  
+}
+
+
+#areadetextoresenha{
+    width:90%;
+  padding: 30px;
+  font-family: "Arial";
+  font-size:18px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  margin-top:5px;
+  margin-left: 5%;
+  outline: none;
+  display:block;
+  resize: none;
+    
+}
+
+#botaoresenha{
+    width: 90%;
+  margin-top: 10px;
+  margin-left: 5%;
+  background: #237d80;
+  padding:15px;
+  text-align: center;
+  text-shadow: 5px;
+  color: whitesmoke;
+  border:1px solid #ccc;
+  border-radius:5px;
+    
+}
+
+
+/*TESTE ADMIN */
+#areatotal{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    margin: 0 auto;
+}
+#areamenu{
+    width: 100%;
+    height: 55px;
+    background-color: white;
+    border-bottom: solid 1px lightgray;
+}
+
+#logoadmin{
+    height: 95%;
+    float: left;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+#menuadmin{
+    width: 8%;
+    height: 100%;
+    border: solid 1px lightgray;
+    border-bottom: none;
+    border-top: none;
+    margin-left: 10%;
+    
+}
+.menuadmin{
+    width: 8%;
+    height: 100%;
+    border: solid 1px lightgray;
+    border-bottom: none;
+    border-top: none;
+    margin-left: 1px;
+}
+
+#menuadmin:hover,.menuadmin:hover{
+    background-color: whitesmoke;
+    
+}
+
+.iconesadmin{
+  
+    
+}
+
+#camponome{
+    width: 13%;
+    height: 10px;
+    background-color: white;
+    border: solid 1px lightgray;
+    border-top: none;
+    float: right;
+    margin-right: 30px;
+    margin-top: 55px;
+    text-align: center;
+    
+    
+    
+}
+
+#imagemusuario2{
+    width: 55px;
+    height: 55px;
+    border:1px solid;
+    border-color: windowframe;
+    border-radius:50%;
+    float: left;
+    margin-left: 30px;
+    margin-top: -70px;
+    
+    
+}
+
+#botoesposicao{
+    position: absolute;
+    margin-left: 85px;
+    margin-top: 10px;
+    
+}
+#minhaconta{
+    width: 110px;
+    height: 25px;
+    border-radius: 5px;
+    border: solid 1px #237d80;
+   color: white;
+   font-family: "Myriad Pro";
+   font-size: 10pt;
+   text-align: center;
+}
+
+#sairadmin{
+   
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    border: solid 1px #237d80;
+    margin-top: 3px;
+     color: white;
+    
+}
+
+#areaexibirdados{
+    width: 80%;
+    height: 90%;
+    background-color: whitesmoke;
+    float: left;
+    margin-left: 10%;
+    margin-top: 25px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+   box-shadow: #AEAEAE 0.5px 0.5px 0.5px 0.5px;
+    
+}
