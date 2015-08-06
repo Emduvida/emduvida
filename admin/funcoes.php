@@ -2,11 +2,11 @@
 
 include_once 'conexao/conect_db.php';
 
-function inserir($tabela, $campos, $valores, $vaiPara, $oque) {
+function inserir($tabela, $campos, $valores) {
     
     $exec = mysql_query("INSERT INTO $tabela (" . $campos . ") VALUES(" . $valores . ")") or die(mysql_error());
     if ($exec == true) {
-        echo "<script>alert('" . $oque . " cadastrado com sucesso!'); location.href='$vaiPara'</script>";
+        return true;
     } else {
         return mysql_error();
     }

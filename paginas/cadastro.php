@@ -1,13 +1,13 @@
 
-
 <?php
+session_start();
 
-$email = $_POST['EMAIL_USUARIO'];
-$senha = $_POST['SENHA_USUARIO'];
+$email = $_SESSION['emailCadastro'];
+$senha = $_SESSION['senhaCadastro'];
 ?>
 
 
-<form id="cadastro" action="op/inserir.php" method="post">
+<form id="cadastro" name="cadastroUsuario" method="post">
 
 
 
@@ -71,5 +71,3 @@ $senha = $_POST['SENHA_USUARIO'];
     <input type="hidden" name="acao" value="cadUsuario"/>
     <input type="submit" value="Cadastrar"  id="inputcadastrouser">
 </form>
-
-

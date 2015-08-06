@@ -59,6 +59,8 @@
             Cadastre-se em</br> nosso Site 
         </p>
 
+        <form id="precadastro" name="cad1" method="post">
+
         <form id="precadastro" action="cadastro" method="post">
 
 
@@ -96,9 +98,9 @@
 
 </section>
 
-<aside id="publicidade">
+<!--<aside id="publicidade">
 
-</aside>
+</aside>-->
 
 <section id="conteudo">
 

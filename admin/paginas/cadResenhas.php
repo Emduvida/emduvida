@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -64,4 +65,3 @@
     
     mysql_query($sql_publicar_resenha) or die(mysql_error());
     }
-

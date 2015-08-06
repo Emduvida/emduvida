@@ -1,3 +1,4 @@
+
 <header>
             <nav>
                 <ul>
@@ -16,4 +17,4 @@
                 ?>
                 <a href="logout.php"> Sair </a>
             </nav>
-        </header>
+

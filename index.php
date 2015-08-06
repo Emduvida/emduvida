@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/estilo_header.css"> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+        <script src="admin/js/jquery-1.11.3.min.js"></script>
+        
+        <script src="js/ajax.js"></script>
+        
+        <script>
+        </script>
     </head>
     <body>
+        <div id="carregando">
+            <div id="carFundo"></div>
+            <div class="carregando"></div>
+        </div>
+        <div class="msg"></div>
         <section id="todo">
 
             <?php include_once 'header.php'; ?>
+            
             <?php
             include_once './config.inc';
             $url[1] = (empty($url[1])) ? null : $url[1];
@@ -32,5 +43,3 @@
         </section>
     </body>
 </html>
-
-
