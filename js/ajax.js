@@ -40,9 +40,9 @@ $(document).ready(function () {
         }, tempo);
     }
 
-    function Redirecionar(tempo) {
+    function Redirecionar(tempo, local) {
         setTimeout(function () {
-            location.href = 'home';
+            location.href = local;
         }, tempo);
     }
 
@@ -141,7 +141,7 @@ $(document).ready(function () {
                     fechaErro(2000);
                 } else if (resposta === '3') {
                     sucesso("Usuario cadastrado com sucesso!");
-                    Redirecionar(1000);
+                    Redirecionar(1000, 'home');
                     fechaErro(1000);
 
                 } else {
@@ -153,6 +153,63 @@ $(document).ready(function () {
             complete: function () {
 
                 //location.href='home';
+
+            }
+        });
+    });
+    
+    
+    var login = $('form[name="frmLogin"]');
+    
+    login.submit(function () {
+        
+        var dados = $(this).serialize();
+        var acao = "&acao=login";
+        var sender = dados + acao;
+
+        $.ajax({
+            url: 'op/gerais.php',
+            data: sender,
+            
+            success: function (resposta) {
+                switch (resposta){
+                    case '1':
+                        erroDados("Encontramos problemas com seu usuario, contato o administrador");
+                        fechaErro(2000);
+                        break;
+                        
+                    case '2':
+                        erroDados("Verifique os dados digitados e tente novamente");
+                        fechaErro(2000);
+                        break;
+                        
+                    case '3':
+                        
+                        sucesso("Seja bem vindo!");
+                        
+                        Redirecionar(1000, 'home');
+                        
+                        break;
+                        
+                    default:
+                       // alert(resposta);
+                        break;
+                }
+/*
+                if (resposta === '1') {
+
+                    
+                } else if (resposta === '2') {
+                    
+                } else {
+
+                   // location.href = 'index2.php';
+                }*/
+
+                //sucesso('<pre>'+resposta+'</pre>');
+            },
+            complete: function () {
+
 
             }
         });

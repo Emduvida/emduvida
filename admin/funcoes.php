@@ -45,15 +45,8 @@ function selecionar($tabela, $identificador, $valor, $campos = ""){
    return $rs;
 }
 
-function contarLinhas($tabela, $identificador, $valor, $campos = ""){
-    $sql = "SELECT ";
-    if($campos == ""){
-        $sql .= " * ";
-    }else{
-        $sql .= " $campos ";
-    }
+function contarLinhas($sql){
     
-    $sql .= " FROM $tabela WHERE $identificador = '{$valor}'";
     
      
    $exec = mysql_query($sql);

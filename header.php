@@ -7,24 +7,31 @@
 
 
         <a href="home"><img src="imagens/logo.png" id="logo"></a>
-        
-        <form id="login">
+
+        <?php if(!isset($_SESSION['usuarioLogado'])){ 
             
+            ?>
+        <form id="login"  name="frmLogin">
+
             <label>
                 <p class="nomeForm">E-mail: </p>
-                <input type="email"class="login" name="">
+                <input type="email"class="login" name="emailLogin">
             </label>
             <label>
-                 <p class="nomeForm">Senha: </p> 
-                 <input type="password" id="loginsenha" name="">
-                
+                <p class="nomeForm">Senha: </p> 
+                <input type="password" id="loginsenha" name="senhaLogin">
+
             </label>
             <label>
-                <p id="textoentrar">entrar</p>  
-            <input type="submit" value="entrar" id="logar">
+               <p id="textoentrar">entrar</p>  
+                <input type="submit" value="entrar" id="logar">
             </label>
-            
+
         </form>
+        <?php }else{
+            echo $_SESSION['NOME_USUARIO'];
+        } ?>
+        
         
         <div id="icones">
             <img src="imagens/fb.png" class="icones">
@@ -45,15 +52,17 @@
             </ul> 
             <hr id="linha">
         </nav>
-        
-        
-        
 
+
+
+<br/><br/>
         <form id="frmPesquisa">
+
             <input type="search"name="pesquisa" id="pesquisa" />
             <input type="image"  src="imagens/search.png" alt=""  name="Pesquisa" id="btn_search"/>
+
         </form>
-        
-        
+
+
     </header>   
 </section>
