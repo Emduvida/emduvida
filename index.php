@@ -10,6 +10,7 @@
         <script src="admin/js/jquery-1.11.3.min.js"></script>
         
         <script src="js/ajax.js"></script>
+        <script src="js/js.js"></script>
         
         <script>
         </script>

@@ -30,6 +30,11 @@
         </form>
         <?php }else{
             echo $_SESSION['NOME_USUARIO'];
+            ?>
+        <a href="faca-sua-resenha">Faça sua resenha</a>
+                
+                
+                <?php
         } ?>
         
         
