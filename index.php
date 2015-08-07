@@ -1,4 +1,6 @@
-<?php session_start(); ?>   
+<?php session_start();
+ include_once './admin/conexao/conect_db.php';
+?>   
 
 <!DOCTYPE html>
 <html>

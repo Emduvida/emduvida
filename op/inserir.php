@@ -70,6 +70,7 @@ switch ($ac) {
         
         $c['NOME_PRODUTO'] = mysql_real_escape_string($_POST['produto']);
         $c['STATUS_PRODUTO'] = mysql_real_escape_string('1');
+        $c['FABRICANTE'] = mysql_real_escape_string($_POST['fabricante']);
         $campos = gerarCampos($c);
         $valores = gerarValores($c);
         
@@ -78,8 +79,7 @@ switch ($ac) {
         $r['COD_PRODUTO'] = mysql_insert_id();
     }
     
-    print_r($r);
-    print_r($c);
+    
     
     
         

@@ -262,9 +262,12 @@ $(document).ready(function () {
                             $('#carregaBusca').html(resposta);
                             $('.j_busca').click(function () {
                                 $('.COD_PRODUTO').val($(this).attr('id'));
+                                $('#carregaBusca').fadeOut();
                             });
+                            $('.adicionaisProduto').fadeOut();
                         } else {
                             $('#carregaBusca').text("Caso não encontre seu produto, pode prosseguir normalmente!")
+                            $('.adicionaisProduto').fadeIn();
                         }
                         break;
                 }
