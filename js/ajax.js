@@ -224,7 +224,13 @@ $(document).ready(function () {
                 switch (resposta) {
                     case '1':
                         break;
+                    case '3':
+                        
+                        sucesso("Resenha Cadastrada com sucesso!");
 
+                        Redirecionar(1000, 'home');
+                        
+                        break;
                     default :
                         alert(resposta);
                         break;

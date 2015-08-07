@@ -6,16 +6,9 @@
         .qualidades{width: 200px; margin-left: 20px; height: auto;}
         .j_qualidades{width: 30px; height: 30px; border: none; cursor: pointer; background-color: #ccc;}
         .boxQualDef{width: 200px; height:  auto; margin-left: 20px;}
-        
-        
-        #containerResenha{width: 700px; position: relative; left: 50%; margin-left: -350px; margin-top: 20px;}
-        #frmResenha{width: 95%; height: auto; background-color: #fff; margin-left: 2.5%;}
-    </style>
-    
-    <section id="containerResenha">
-        
 
-<form id="frmResenha" name="cadResenha" method="">
+    </style>
+<form id="resenha" name="cadResenha" method="">
 
 
     <legend class="legendform">Informações do produto</legend>  
@@ -32,12 +25,12 @@
         <div class="adicionaisProduto">
             <label class="tituloform">Categoria:</label>
             
-            <select name="categoria">
+            <select>
                 <?php $sql = mysql_query("SELECT * FROM categoria") or die(mysql_error());
                 
                 while($rs = mysql_fetch_assoc($sql)){
                         ?>
-                <option value="<?php echo $rs['COD_CATEGORIA']; ?>"><?php echo $rs['NOME_CATEGORIA']; ?></option>
+                <option value="<?php echo $rs['NOME_CATEGORIA']; ?>"><?php echo $rs['NOME_CATEGORIA']; ?></option>
                 <?php
                 } 
                 ?>
@@ -93,7 +86,7 @@
                     <input type="submit" value="Resenhar" id="botaoresenha">
                 </form>
 
-    </section>
+
             
             
 
