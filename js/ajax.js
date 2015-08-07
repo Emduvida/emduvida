@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     var carr = $('.carregando');
     var carrFundo = $('#carregando');
     var errmsg = $('.msg');
@@ -81,6 +81,10 @@ $(document).ready(function () {
 
     //LOGIN INICIAL 
 
+
+//PREPARAÇÃO DO CADASTRO E ENVIO DE SESSOA PARA PAGINA DE CADASTRO
+
+
     var cad1 = $('form[name="cad1"]');
     cad1.submit(function () {
         var dados = $(this).serialize();
@@ -105,9 +109,9 @@ $(document).ready(function () {
                     return false;
 
                 } else {
-                   //alert(resposta);
+                    //alert(resposta);
 
-                  location.href = "cadastro";
+                    location.href = "cadastro";
 
 
                 }
@@ -121,6 +125,9 @@ $(document).ready(function () {
             }
         });
     });
+
+
+//CADASTRO DE USUARIOS UTILIZANDO AJAX
 
     var cadUsuario = $('form[name="cadastroUsuario"]');
     cadUsuario.submit(function () {
@@ -157,12 +164,12 @@ $(document).ready(function () {
             }
         });
     });
-    
-    
+
+    //FUNÇÃO PARA REALIZAÇÃO DE LOGIN DO USUARIO NA PAGINA INICIAL
     var login = $('form[name="frmLogin"]');
-    
+
     login.submit(function () {
-        
+
         var dados = $(this).serialize();
         var acao = "&acao=login";
         var sender = dados + acao;
@@ -170,43 +177,31 @@ $(document).ready(function () {
         $.ajax({
             url: 'op/gerais.php',
             data: sender,
-            
             success: function (resposta) {
-                switch (resposta){
+                switch (resposta) {
                     case '1':
                         erroDados("Encontramos problemas com seu usuario, contato o administrador");
                         fechaErro(2000);
                         break;
-                        
+
                     case '2':
                         erroDados("Verifique os dados digitados e tente novamente");
                         fechaErro(2000);
                         break;
-                        
+
                     case '3':
-                        
+
                         sucesso("Seja bem vindo!");
-                        
+
                         Redirecionar(1000, 'home');
-                        
+
                         break;
-                        
+
                     default:
-                       // alert(resposta);
+
                         break;
                 }
-/*
-                if (resposta === '1') {
 
-                    
-                } else if (resposta === '2') {
-                    
-                } else {
-
-                   // location.href = 'index2.php';
-                }*/
-
-                //sucesso('<pre>'+resposta+'</pre>');
             },
             complete: function () {
 
@@ -215,88 +210,73 @@ $(document).ready(function () {
         });
     });
 
+    var cadResenha = $('form[name="cadResenha"]');
+    cadResenha.submit(function () {
+        var dados = $(this).serialize();
+        var acao = "&acao=cadResenha";
+        var sender = dados + acao;
+
+        $.ajax({
+            url: 'op/inserir.php',
+            data: sender,
+            success: function (resposta) {
+
+                switch (resposta) {
+                    case '1':
+                        break;
+
+                    default :
+                        alert(resposta);
+                        break;
+                }
+
+            },
+            complete: function () {
 
 
 
-    //FIM DO LOGIN INICIAL
+            }
+        });
+    });
 
-    //CADASTRO DE LOGIN'S
-    /*
-     var cadLogin = $('form[name="cadastroLogin"]');
-     
-     cadLogin.submit(function () {
-     
-     var dados = $(this).serialize();
-     var acao = "&acao=cadLogin";
-     var sender = dados + acao;
-     $.ajax({
-     data: sender,
-     success: function (resposta) {
-     
-     if (resposta == 1) {
-     
-     erroDados("<strong>Erro ao cadastrar login: </strong> campos em branco");
-     return false;
-     } else if (resposta == 3) {
-     
-     
-     location.href = 'dados.php?pag=4&acao=listar';
-     
-     } else{
-     
-     erroDados(resposta);
-     
-     }
-     
-     //sucesso('<pre>'+resposta+'</pre>');
-     },
-     complete: function () {
-     
-     
-     }
-     });
-     });
-     
-     
-     
-     
-     
-     
-     var alterarVenda = $('form[name="alterarStatusPedido"]');
-     
-     alterarVenda.change(function () {
-     
-     var dados = $(this).serialize();
-     var acao = "&acao=alterStatusPed";
-     var sender = dados + acao;
-     $.ajax({
-     data: sender,
-     success: function (resposta) {
-     
-     if (resposta == 1) {
-     
-     erroDados("<strong>Erro ao cadastrar login: </strong> campos em branco");
-     return false;
-     } else if (resposta == 3) {
-     
-     
-     location.href = 'dados.php?pag=4&acao=listar';
-     
-     } else {
-     
-     erroDados(resposta);
-     
-     }
-     
-     //sucesso('<pre>'+resposta+'</pre>');
-     },
-     complete: function () {
-     
-     
-     }
-     });
-     
-     });*/
+    var produtos = $('.inputProd');
+    produtos.keydown(function () {
+        //alert("aaa");
+        var dados = $(this).serialize();
+        var acao = "&acao=pesquisarProd";
+        var sender = dados + acao;
+
+        $.ajax({
+            url: 'op/pesquisar.php',
+            data: sender,
+            beforeSend: null,
+            success: function (resposta) {
+
+                switch (resposta) {
+                    case '1':
+
+                        break;
+
+                    default :
+                        if (resposta !== '2') {
+                            $('#carregaBusca').html(resposta);
+                            $('.j_busca').click(function () {
+                                $('.COD_PRODUTO').val($(this).attr('id'));
+                            });
+                        } else {
+                            $('#carregaBusca').text("Caso não encontre seu produto, pode prosseguir normalmente!")
+                        }
+                        break;
+                }
+
+            },
+            complete: function () {
+
+
+
+            }
+        });
+    });
 
 
 });

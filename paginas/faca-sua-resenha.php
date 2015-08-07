@@ -1,20 +1,5 @@
-
-<form id="resenha" action="" method="">
-
-
-    <legend class="legendform">Informações do produto</legend>  
-    <fieldset id="inform_produto">
-        <label class="tituloform">Nome do Produto:</label>
-        <input type="text" class="COD_PRODUTO" name="COD_PRODUTO" placeholder="ex: Iphone 6" id="inputpadraoresenha"><br>
-
-
-
-        <label class="tituloform">Nota:</label>
-        <input type="number" class="NOTA_PRODUTO" name="NOTA_PRODUTO" placeholder="classifique o produto de 0 a 5 pontos" min="0" max="5" required="required" id="inputpadraoresenha">
-
-
-    </fieldset>
     <style>
+        #resultadoBusca{width: 400px; height: auto; background-color: #ccc; margin-top: -15px; margin-left: 30px; position: absolute; z-index: 110;}
         .tituloFormulario{display: block; width: 100%; height: 20px; color: #000; font-size: 18px; padding-top: 10px;}
         .inputQualidades{display: block; width: 150px; height: 20px; margin-top: 5px;}
         .qualidades{width: 200px; margin-left: 20px; height: auto;}
@@ -22,6 +7,27 @@
         .boxQualDef{width: 200px; height:  auto; margin-left: 20px;}
 
     </style>
+<form id="resenha" name="cadResenha" method="">
+
+
+    <legend class="legendform">Informações do produto</legend>  
+    <fieldset id="inform_produto">
+        <label class="tituloform">Nome do Produto:</label>
+        <input type="text" class="COD_PRODUTO inputProd" name="produto" placeholder="ex: Iphone 6" id="inputpadraoresenha"><br>
+        
+        <div id="resultadoBusca">
+            <ul id="carregaBusca">
+                
+            </ul>
+        </div>
+
+
+        <label class="tituloform">Nota:</label>
+        <input type="number" class="NOTA_PRODUTO" name="NOTA_PRODUTO" placeholder="classifique o produto de 0 a 5 pontos" min="0" max="5" required="required" id="inputpadraoresenha">
+
+
+    </fieldset>
+
     <legend class="legendform">Qualidades e defeitos</legend>
     <fieldset id="opiniao_geral">
         <div class="boxQualDef">
@@ -61,7 +67,6 @@
                     <input type="submit" value="Resenhar" id="botaoresenha">
                 </form>
 
-            </form>
 
             
             
